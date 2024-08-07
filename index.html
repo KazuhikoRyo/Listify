@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listify</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-image: url('https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff !important;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand svg {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ffbf00;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+            </svg>
+            Listify
+        </a>
+    </nav>
+
+    <div class="content container mt-5">
+        <h1 class="text-center mb-4">Task Manager</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="todo-input" class="form-control" placeholder="Add a new task">
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="add-btn" type="button">Add</button>
+            </div>
+        </div>
+        <ul class="list-group" id="todo-list"></ul>
+    </div>
+
+
+    <footer class="footer">
+        &copy; 2024 Listify. All Rights Reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
